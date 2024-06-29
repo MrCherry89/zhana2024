@@ -70,4 +70,6 @@ $(document).ready(function () {
       preload: [0, 1],
     },
   });
+
+  AOS.init();
 });
