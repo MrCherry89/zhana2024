@@ -777,6 +777,7 @@ a:focus {
   min-height: 170px;
   transition: 0.3s;
   cursor: pointer;
+  background: white;
   padding: 15px;
 }
 @media (max-width: 1024px) {
@@ -790,6 +791,7 @@ a:focus {
     grid-column: inherit !important;
     min-height: auto;
     padding: 20px;
+    min-height: 80px;
   }
 }
 .advantages .wrapper .advantages-items .advantages-item:nth-child(1) {
@@ -824,30 +826,6 @@ a:focus {
   grid-row: 3/4;
   grid-column: 5/6;
 }
-.advantages .wrapper .advantages-items .advantages-item:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  background: white;
-  transition: 0.3s;
-  width: 100%;
-  height: 100%;
-  border-radius: 8px;
-}
-.advantages .wrapper .advantages-items .advantages-item:after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -2;
-  background: linear-gradient(96deg, #1c8035 -3.58%, #43be61 100.57%);
-  transition: 0.3s;
-  width: 100%;
-  height: 100%;
-  border-radius: 8px;
-}
 .advantages .wrapper .advantages-items .advantages-item h2,
 .advantages .wrapper .advantages-items .advantages-item h3,
 .advantages .wrapper .advantages-items .advantages-item h4 {
@@ -868,7 +846,7 @@ a:focus {
 }
 @media (max-width: 767px) {
   .advantages .wrapper .advantages-items .advantages-item h2 {
-    font-size: 20px;
+    font-size: 18px;
   }
   .advantages .wrapper .advantages-items .advantages-item h2 br {
     display: none;
@@ -884,7 +862,7 @@ a:focus {
 }
 @media (max-width: 767px) {
   .advantages .wrapper .advantages-items .advantages-item h3 {
-    font-size: 20px;
+    font-size: 18px;
   }
   .advantages .wrapper .advantages-items .advantages-item h3 br {
     display: none;
@@ -895,22 +873,45 @@ a:focus {
 }
 @media (max-width: 1024px) {
   .advantages .wrapper .advantages-items .advantages-item h4 {
-    font-size: 20px;
+    font-size: 18px;
   }
   .advantages .wrapper .advantages-items .advantages-item h4 br {
     display: none;
   }
 }
-.advantages .wrapper .advantages-items .advantages-item:hover h2,
-.advantages .wrapper .advantages-items .advantages-item:hover h3,
-.advantages .wrapper .advantages-items .advantages-item:hover h4 {
+.advantages .wrapper .advantages-items .advantages-item .hide-block {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(96deg, #1c8035 -3.58%, #43be61 100.57%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  transform: translateY(-100%);
+  transition: 0.3s;
+  padding: 10px;
+}
+.advantages .wrapper .advantages-items .advantages-item .hide-block p {
   color: white;
+  font-size: 20px;
+  font-weight: 500;
+  text-align: center;
+  margin: auto;
 }
-.advantages .wrapper .advantages-items .advantages-item:hover:before {
-  opacity: 0;
+@media (max-width: 1024px) {
+  .advantages .wrapper .advantages-items .advantages-item .hide-block p {
+    font-size: 18px;
+  }
 }
-.advantages .wrapper .advantages-items .advantages-item:hover:after {
-  opacity: 1;
+@media (max-width: 767px) {
+  .advantages .wrapper .advantages-items .advantages-item .hide-block p {
+    font-size: 16px;
+  }
+}
+.advantages .wrapper .advantages-items .advantages-item:hover .hide-block {
+  transform: translateY(0);
 }
 
 .location {
