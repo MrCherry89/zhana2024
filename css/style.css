@@ -1611,4 +1611,24 @@ img.mfp-img {
   }
 }
 
+.layouts {
+  padding: 60px 0;
+}
+.layouts .main-title {
+  max-width: 1120px;
+  width: 100%;
+  margin: 0 auto 40px;
+  padding: 0 20px;
+}
+.layouts .layouts-slider .item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 10px;
+}
+.layouts .layouts-slider .item img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
 /*# sourceMappingURL=style.css.map */

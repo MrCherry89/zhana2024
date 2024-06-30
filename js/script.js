@@ -71,5 +71,41 @@ $(document).ready(function () {
     },
   });
 
+  $(".popup-layouts").magnificPopup({
+    delegate: "a",
+    type: "image",
+    tLoading: "Loading image #%curr%...",
+    mainClass: "mfp-img-mobile",
+    gallery: {
+      enabled: true,
+      navigateByImgClick: true,
+      preload: [0, 1],
+    },
+  });
+
+  $(".layouts-slider").slick({
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    dots: false,
+    autoplay: true,
+    autoplaySpeed: 2000,
+    cssEase: "linear",
+    centerMode: true,
+    speed: 1000,
+    focusOnSelect: true,
+    centerPadding: "40px",
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          arrows: false,
+          centerMode: true,
+          centerPadding: "40px",
+          slidesToShow: 1,
+        },
+      },
+    ],
+  });
+
   AOS.init();
 });
